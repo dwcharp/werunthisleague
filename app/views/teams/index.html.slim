@@ -1,0 +1,15 @@
+html
+  head
+    title Midway Men's Baseball League
+    table class="table"
+    	thead
+    		tr
+    		 th Name
+    		 th City
+    		 th Info
+    	tbody
+    		- @teams.each do |team|
+    			tr
+    				td = link_to "#{team.name}", team 
+    				td = "#{team.city}"
+    				td = "#{team.description}"

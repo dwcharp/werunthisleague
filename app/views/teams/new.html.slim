@@ -1,0 +1,16 @@
+html
+  head
+    title Add a Team to your league
+    div
+      = form_for @team do |f|
+        .form-group
+          = f.label :name
+          = f.text_field :name
+        .form-group
+          = f.label :city
+          = f.text_field :city
+        .form-group
+          = f.label :description
+          = f.text_field :description
+        .action
+          = f.submit
