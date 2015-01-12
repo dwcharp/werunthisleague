@@ -1,0 +1,16 @@
+html
+  head
+    title Come joing the Midway Men's Baseball League
+    div
+      = form_for @player do |f|
+        .form-group
+          = f.label :first_name
+          = f.text_field :first_name
+        .form-group
+          = f.label :last_name
+          = f.text_field :last_name  
+        .form-group
+          = f.label :position
+          = f.text_field :position
+        .action
+          = f.submit

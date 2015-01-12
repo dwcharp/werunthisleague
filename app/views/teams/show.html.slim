@@ -1,3 +1,14 @@
 html
   head
     title = @team.name
+    table class="table"
+        thead
+            tr
+             th Name
+             th position
+        tbody
+            - @team.players.each do |player|
+                tr
+                    td = link_to "#{player.first_name} #{player.last_name}", player
+                    td = "#{player.position}"
+    = link_to "Add player to team", new_player_path(:team_id => @team.id)

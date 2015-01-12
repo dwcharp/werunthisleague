@@ -1,0 +1,19 @@
+html
+  head
+    title = 'Roster Management for the #{@team.name}'
+    div
+      = form_for(@player, url:teams_add_new_player_path) do |f|
+        .form-group
+          = f.label :first_name
+          = f.text_field :first_name
+        .form-group
+          = f.label :last_name
+          = f.text_field :last_name
+        .form-group
+          = f.label :position
+          = f.text_field :position
+        .form-group
+          = f.label :home_town
+          = f.text_field :home_town
+        .action
+          = f.submit
