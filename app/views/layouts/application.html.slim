@@ -1,9 +1,14 @@
 doctype html
 html
-
 head
-  = stylesheet_link_tag "application", :media => "all"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
+= stylesheet_link_tag "application", :media => "all"
+= javascript_include_tag "application"
+= csrf_meta_tags
 body
-  = yield
+.main_div class = "container"
+  #league_logo
+  #row_con class = "row"
+    #main_content class = "col-md-3" 
+      = yield
+    #side_bar class = "col-md-3"
+      h2 Hello World

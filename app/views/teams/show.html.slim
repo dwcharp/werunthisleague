@@ -11,4 +11,4 @@ html
                 tr
                     td = link_to "#{player.first_name} #{player.last_name}", player
                     td = "#{player.position}"
-    = link_to "Add player to team", new_player_path(:team_id => @team.id)
+    = link_to "Add player to team", add_new_player_team_path(@team)

@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'teams#index'
+  root 'league#index'
   resources :teams do
-  	collection do
+  	member do
   		post 'add_new_player'
   	end	
   end
