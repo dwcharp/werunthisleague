@@ -5,10 +5,19 @@ head
 = javascript_include_tag "application"
 = csrf_meta_tags
 body
-.main_div class = "container"
+.main_div.container-fluid
   #league_logo
-  #row_con class = "row"
-    #main_content class = "col-md-3" 
+  #row_con.row
+    #side_bar.col-md-3
+      #side_bar_row.row
+        #side_bar_col.col-md-2
+          = link_to 'Home', root_path
+      #side_bar_row.row
+        #side_bar_col.col-md-2
+          = link_to 'Teams', teams_path
+      #side_bar_row.row
+      #side_bar_row.row
+      #side_bar_row.row
+      #side_bar_row.row
+    #main_content.col-md-6
       = yield
-    #side_bar class = "col-md-3"
-      h2 Hello World
