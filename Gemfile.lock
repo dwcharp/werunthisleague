@@ -30,6 +30,11 @@ GEM
     arel (5.0.1.20140414130214)
     autoprefixer-rails (3.1.2.20141016)
       execjs
+    aws-sdk-core (2.0.2)
+      builder (~> 3.0)
+      jamespath (>= 0.5.1)
+      multi_json (~> 1.0)
+      multi_xml (~> 0.5)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     builder (3.2.2)
@@ -46,6 +51,7 @@ GEM
     execjs (2.2.2)
     hike (1.2.3)
     i18n (0.6.11)
+    jamespath (0.5.1)
     jbuilder (2.2.6)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -59,6 +65,7 @@ GEM
     mime-types (2.4.3)
     minitest (5.5.0)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -140,6 +147,7 @@ PLATFORMS
 
 DEPENDENCIES
   autoprefixer-rails
+  aws-sdk-core
   bootstrap-sass (~> 3.2.0)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)

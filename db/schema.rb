@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141226024719) do
+ActiveRecord::Schema.define(version: 20141225043126) do
 
   create_table "players", force: true do |t|
     t.string   "first_name"
     t.string   "last_name"
+    t.string   "email_address"
+    t.string   "phone_number"
     t.string   "position"
     t.string   "number"
     t.string   "bio"
@@ -27,9 +29,9 @@ ActiveRecord::Schema.define(version: 20141226024719) do
     t.string   "college"
     t.string   "high_school"
     t.string   "home_town"
+    t.integer  "team_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "team_id"
   end
 
   create_table "teams", force: true do |t|
