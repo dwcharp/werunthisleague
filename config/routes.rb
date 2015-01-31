@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :players do
   	collection do
    	 get 'signup'
+     post 'signup_confirm'
   	end
   end
 end

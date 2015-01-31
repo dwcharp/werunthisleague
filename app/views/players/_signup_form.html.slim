@@ -1,5 +1,5 @@
   div
-    = form_for @player, :html => {:class => "form-horizontal center"} do |f|
+    = form_for @player,:url => { :action => "signup_confirm" }, :html => {:class => "form-horizontal center"} do |f|
       .form-group
         = f.label :first_name, class: "col-md-4 control-label"
         .col-md-4

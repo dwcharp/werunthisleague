@@ -6,14 +6,20 @@ class PlayersController < ApplicationController
 
   def create
     @player = Player.new(player_params)
-    SesMailer.sign_up_confirmation(@player).deliver
-    redirect_to root_path
   end
 
   def signup
     @player = Player.new
-    @player.team_id = -1
   end
+
+  def signup_confirm
+    @player = Player.new(player_params)
+    @player.team_id = -1
+    @player.save
+    SesMailer.sign_up_confirmation(@player).deliver
+    redirect_to root_path
+  end
+
 
   def index
   end
