@@ -16,7 +16,7 @@ class PlayersController < ApplicationController
     @player = Player.new(player_params)
     @player.team_id = -1
     @player.save
-    SesMailer.sign_up_confirmation(@player).deliver
+    SesMailer.signup_player_confirmation(@player).deliver
     redirect_to root_path
   end
 

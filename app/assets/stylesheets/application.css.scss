@@ -1,21 +1,44 @@
+@import "bootstrap-sprockets";
 @import "bootstrap";
 body {
   // background-color: #010101;
+}
+.navbar {
+  margin-bottom: 0;
+  background-color: #c0392b;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: black;
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+  color: black;
+  background-color: transparent;
 }
 
 #team-listing {
 	background-color: #DADFE1;
 }
 
-#league_logo {
+#league-logo {
 	background-image: url("midway.jpg");
 	width:1100px;
-    height:200px;
-    background-repeat:no-repeat;
-    margin: auto;
-    display:block;
+  height:120px;
+  background-repeat:no-repeat;
+  margin: auto;
+  display:block;
 }
 
 #side-bar {
-	background-color: #DADFE1
+	background-color: #DADFE1;
+  white-space: nowrap;
 }

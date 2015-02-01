@@ -1,0 +1,23 @@
+nav.navbar.navbar-inverse.navbar-lg role="navigation"
+  /! Brand and toggle get grouped for better mobile display
+  .navbar-header
+    button.navbar-toggle data-target="#navbar-collapse-7" data-toggle="collapse" type="button" 
+      span.sr-only Toggle navigation
+    a.navbar-brand href=root_path Midway Mens Baseball
+  #navbar-collapse-7.collapse.navbar-collapse
+    ul.nav.navbar-nav
+      li
+        a.top-nav-a href=teams_path  Teams
+    
+    ul.nav.navbar-nav.navbar-right
+      li.dropdown
+        a.dropdown-toggle data-toggle="dropdown" href="#" 
+          | Sign Up !
+          b.caret
+        ul.dropdown-menu
+          li
+            a href=signup_players_path  Player Signup
+          li.divider
+          li
+            a href=signup_teams_path  Team signup_teams_path
+  /! /.navbar-collapse

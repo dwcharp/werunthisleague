@@ -1,0 +1,24 @@
+  div
+    = form_for @team,:url => { :action => "signup_confirm" }, :html => {:class => "form-horizontal center"} do |f|
+      .form-group
+        = f.label :name, class: "col-md-4 control-label"
+        .col-md-4
+          = f.text_field :name
+      .form-group
+        = f.label :head_coach, class: "col-md-4 control-label"
+        .col-md-4
+          = f.text_field :head_coach
+      .form-group
+        = f.label :city, class: "col-md-4 control-label"
+        .col-md-4
+          = f.text_field :city
+      .form-group
+        = f.label :email_address, class: "col-md-4 control-label"
+        .col-md-4
+          = f.text_field :email_address
+      .form-group
+        = f.label :description, class: "col-md-4 control-label"
+        .col-md-4
+          = f.text_field :description
+      .action
+        = f.submit 'Sign up', class: 'btn'

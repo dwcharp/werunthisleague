@@ -38,6 +38,9 @@ ActiveRecord::Schema.define(version: 20141225043126) do
     t.string   "name"
     t.string   "city"
     t.string   "description"
+    t.string   "head_coach"
+    t.string   "logo_url"
+    t.string   "email_address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

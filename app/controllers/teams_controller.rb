@@ -1,6 +1,7 @@
 class TeamsController < ApplicationController
   def new
     @team = Team.new
+
   end
 
   def create
@@ -21,7 +22,7 @@ class TeamsController < ApplicationController
   end
 
   def add_new_player
-    @team = Team.find(1)
+    @team = Team.find(params[:id])
     @team.players.create(player_params)
     if @team.save
       redirect_to(@team)
@@ -29,9 +30,18 @@ class TeamsController < ApplicationController
     end
   end
 
+  def signup
+    @team = Team.new
+  end
+
+  def signup_confirm
+    @team = Team.new(team_params)
+    @team.save
+  end
+
   private
     def team_params
-      params.require(:team).permit(:name, :city, :description)
+      params.require(:team).permit(:name, :city, :description, :coca)
     end
 
     def player_params
