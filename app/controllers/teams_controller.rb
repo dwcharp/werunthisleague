@@ -37,11 +37,12 @@ class TeamsController < ApplicationController
   def signup_confirm
     @team = Team.new(team_params)
     @team.save
+    redirect_to root_path
   end
 
   private
     def team_params
-      params.require(:team).permit(:name, :city, :description, :coca)
+      params.require(:team).permit(:name, :city, :description, :head_coach, :team_logo, :email_address)
     end
 
     def player_params

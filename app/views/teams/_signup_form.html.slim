@@ -25,5 +25,10 @@
         .col-md-3
           = f.text_field :description
       hr
+      .form-group
+        = f.label :Team_Logo, class: "col-md-3 control-label"
+        .col-md-3
+          = f.file_field :team_logo
+      hr
       .action
         = f.submit 'Sign up', class: 'btn-block btn-primary signup-submit'

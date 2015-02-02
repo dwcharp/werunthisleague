@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141225043126) do
+ActiveRecord::Schema.define(version: 20150202012253) do
 
   create_table "players", force: true do |t|
     t.string   "first_name"
@@ -39,10 +39,13 @@ ActiveRecord::Schema.define(version: 20141225043126) do
     t.string   "city"
     t.string   "description"
     t.string   "head_coach"
-    t.string   "logo_url"
     t.string   "email_address"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "team_logo_file_name"
+    t.string   "team_logo_content_type"
+    t.integer  "team_logo_file_size"
+    t.datetime "team_logo_updated_at"
   end
 
 end

@@ -5,7 +5,6 @@ class CreateTeams < ActiveRecord::Migration
       t.string :city
       t.string :description
       t.string :head_coach
-      t.string :logo_url
       t.string :email_address
       
       t.timestamps

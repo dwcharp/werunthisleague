@@ -43,6 +43,8 @@ Rails.application.configure do
     :port => 465
   }
 
+  Paperclip.options[:command_path] = "/usr/local/bin/"
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
