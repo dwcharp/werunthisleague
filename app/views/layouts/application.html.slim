@@ -4,11 +4,11 @@ head
 = stylesheet_link_tag "application", :media => "all"
 = javascript_include_tag "application"
 = csrf_meta_tags
-== render :partial => 'top_nav'
 .row
-  #diamond-left.col-md-3  
+  / #diamond-left.col-md-3  
   #league-logo.col-md-6
-  #diamond-right.col-md-3
+  / #diamond-right.col-md-3
+== render :partial => 'top_nav'
 hr.heading-break
 body
 .main_div.container-fluid

@@ -2,15 +2,17 @@ html
   head
     title Midway Men's Baseball League
     #team-listing 
-        table class="table table-bordered table-condense"
-        	thead
-        		tr
-        		 th Name
-        		 th City
-        		 th Info
-        	tbody
-        		- @teams.each do |team|
-        			tr
-        				td = link_to "#{team.name}", team 
-        				td = "#{team.city}"
-        				td = "#{team.description}"
+        table.table.table-striped.table-bordered.table-condensed
+          thead
+            tr
+              th
+              th Name
+              th City
+              th Info
+          tbody
+            - @teams.each do |team|
+              tr
+                td.logo = image_tag  team.team_logo.url(:thumb)
+                td.team-td = link_to team.name, team
+                td.team-td = "#{team.city}"
+                td.team-td = "#{team.description}"
