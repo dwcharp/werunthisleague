@@ -1,14 +1,24 @@
 html
   head
     title = @team.name
-    table class="table"
-        thead
-            tr
-             th Name
-             th position
-        tbody
-            - @team.players.each do |player|
-                tr
-                    td = link_to "#{player.first_name} #{player.last_name}", player
-                    td = "#{player.position}"
-    = link_to "Add player to team", add_new_player_team_path(@team)
+    .row.team-show
+      .col-md-3
+        .logo-div 
+          p Logo
+        .schedule-div
+          p Schedule
+      .col-md-6
+        p = @team.name
+        .coach-div
+          p Coaches
+        .record-div
+          p 10 - 0
+        .team-info-div
+          p = @team.description
+        .roster-div
+          p Roster
+      .col-md-3
+        .sponsers-div
+          p Sponsers
+        .stats-div
+          p Stats
