@@ -2,23 +2,25 @@ html
   head
     title = @team.name
     .row.team-show
-      .col-md-3
+      .col-md-4
         .logo-div 
           p Logo
         .schedule-div
           p Schedule
-      .col-md-6
+      .col-md-5
         p = @team.name
-        .coach-div
-          p Coaches
-        .record-div
-          p 10 - 0
         .team-info-div
           p = @team.description
+        .record-div
+          p 10 - 0
+        .coach-div
+          p Coaches
         .roster-div
-          p Roster
+          == render 'roster'
       .col-md-3
         .sponsers-div
           p Sponsers
         .stats-div
           p Stats
+        .add-player-div
+          = link_to 'Manage Roster', roster_management_team_path

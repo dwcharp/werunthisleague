@@ -17,7 +17,6 @@ class PlayersController < ApplicationController
     @player.team_id = -1
     @player.save
     SesMailer.signup_player_confirmation(@player).deliver
-    redirect_to root_path
   end
 
 

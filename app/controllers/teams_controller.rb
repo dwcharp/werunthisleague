@@ -19,15 +19,18 @@ class TeamsController < ApplicationController
 
   def show
   	@team = Team.find(params[:id])
+    @players = @team.players
+  end
+
+  def roster_management
+    @team = Team.find(params[:id])
+    @player = Player.new
   end
 
   def add_new_player
     @team = Team.find(params[:id])
-    @team.players.create(player_params)
-    if @team.save
-      redirect_to(@team)
-    else
-    end
+    @team.players << Player.new(player_params)
+    redirect_to(@team)
   end
 
   def signup
@@ -46,6 +49,6 @@ class TeamsController < ApplicationController
     end
 
     def player_params
-      params.require(:player).permit(:last_name, :first_name, :home_town, :position)
+      params.require(:player).permit(:last_name, :first_name, :home_town, :position,:number, :photo)
     end
 end

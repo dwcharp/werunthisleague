@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     
   	member do
   		post 'add_new_player'
+      get  'roster_management'
   	end	
   end
 
