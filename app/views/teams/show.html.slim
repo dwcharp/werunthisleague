@@ -4,7 +4,7 @@ html
     .row.team-show
       .col-md-4
         .logo-div 
-          p Logo
+           = image_tag  @team.team_logo.url(:medium)
         .schedule-div
           p Schedule
       .col-md-5

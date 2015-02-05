@@ -1,7 +1,6 @@
 class TeamsController < ApplicationController
   def new
     @team = Team.new
-
   end
 
   def create
@@ -10,6 +9,17 @@ class TeamsController < ApplicationController
       redirect_to(@team)
     else
       render :new
+    end
+  end
+
+  def edit
+    @team = Team.find(params[:id])
+  end
+
+  def update
+    @team = Team.find(params[:id])
+    if @team.update(team_params)
+      redirect_to(@team)
     end
   end
 

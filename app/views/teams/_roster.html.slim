@@ -2,14 +2,13 @@
     table.table.table-striped.table-bordered.table-condensed
       thead
         tr
-          th
-          th #
-          th POS
+          th.roster-num #
           th Name
+          th POS
       tbody
         - @players.each do |player|
           tr
-            td.logo = image_tag  player.photo.url(:thumb)
-            td = player.number
-            td = player.position
-            td = link_to player.first_name + ' '  + player.last_name, player
+            td.roster-num = player.number
+            td.roster-td = link_to player.first_name + ' '  + player.last_name, player
+            td.roster-pos-td = player.position
+            
