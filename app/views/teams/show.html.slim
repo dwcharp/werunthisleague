@@ -1,22 +1,22 @@
 html
   head
-    title = @team.name
     .row.team-show
       .col-md-4
         .logo-div 
            = image_tag  @team.team_logo.url(:medium)
-        .schedule-div
-          p Schedule
+        .roster-div
+          == render 'roster'
       .col-md-5
-        p = @team.name
+        .team-name
+          h2 = @team.name
         .team-info-div
           p = @team.description
         .record-div
-          p 10 - 0
+        h2.team-record   10 - 0
         .coach-div
           p Coaches
-        .roster-div
-          == render 'roster'
+        .schedule-div
+          == render 'schedule'
       .col-md-3
         .sponsers-div
           p Sponsers
