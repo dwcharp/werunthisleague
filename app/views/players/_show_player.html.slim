@@ -1,0 +1,8 @@
+.modal.modal-sm id="show-player-modal-#{player.id}"
+  .modal-header.row
+    .col-md-2
+      = image_tag player.photo.url(:thumb)
+    h3#myModalLabel.col-md-9 ##{player.number} #{player.first_name}  #{player.last_name}
+  .modal-body
+    | **here comes whatever you want to show!**
+  .modal-footer

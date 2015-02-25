@@ -9,6 +9,6 @@
         - @players.each do |player|
           tr
             td.roster-num = player.number
-            td.roster-td = link_to player.first_name + ' '  + player.last_name, player
+            td.roster-td data-id="show-player-modal-#{player.id}" = link_to player.first_name + ' '  + player.last_name, player
             td.roster-pos-td = player.position
             

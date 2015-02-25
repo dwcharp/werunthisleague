@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'teams#index'
+  root 'league#index'
   resources :teams do
     collection do
       get 'signup'

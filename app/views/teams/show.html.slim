@@ -24,3 +24,4 @@ html
           p Stats
         .add-player-div
           = link_to 'Manage Roster', roster_management_team_path
+= render partial: 'players/show_player.html', collection: @players, as: :player 

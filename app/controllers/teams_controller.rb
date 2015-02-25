@@ -49,8 +49,10 @@ class TeamsController < ApplicationController
 
   def signup_confirm
     @team = Team.new(team_params)
-    @team.save
-    redirect_to root_path
+    if @team.save
+      SesMailer.signup_team_confirmation(@team).deliver
+      redirect_to root_path
+    end
   end
 
   private
