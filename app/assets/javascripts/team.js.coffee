@@ -1,3 +1,12 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('.roster-td').hover ->
+      playerId = $(this).attr("data-id")
+      $('#' + playerId).modal({
+        show: true,
+        backdrop:false
+        })
+      return
+    ,-> 
+      playerId = $(this).attr("data-id")
+      $('#' + playerId).modal('hide')
+      return

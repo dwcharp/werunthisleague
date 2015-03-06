@@ -17,6 +17,7 @@ class PlayersController < ApplicationController
     @player.team_id = -1
     @player.save
     SesMailer.signup_player_confirmation(@player).deliver
+    redirect_to root_path
   end
 
 
@@ -28,6 +29,7 @@ class PlayersController < ApplicationController
 
   private
   def player_params
-    params.require(:player).permit(:last_name, :first_name, :home_town, :position, :email_address)
+    params.require(:player).permit(:last_name, :first_name, :home_town, :position, :email_address, :age, 
+      :height, :weight, :phone_number, :position, :throw, :bat, :college, :high_school, :home_town)
   end
 end

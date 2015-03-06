@@ -5,9 +5,10 @@ head
 = javascript_include_tag "application"
 = csrf_meta_tags
 .row
-  / #diamond-left.col-md-3  
-  #league-logo.col-md-6
-  / #diamond-right.col-md-3
+  #league-logo-left.col-md-3
+  #bat-center.col-md-3  
+  #league-logo-right.col-md-3
+  
 == render :partial => 'top_nav'
 hr.heading-break
 body
