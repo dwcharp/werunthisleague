@@ -34,7 +34,7 @@ class TeamsController < ApplicationController
 
   def roster_management
     @team = Team.find(params[:id])
-    @player = Player.new
+    @players = @team.players
   end
 
   def add_new_player
