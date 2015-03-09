@@ -1,0 +1,35 @@
+  div
+    .form-container
+      = form_for @team, :html => {:class => "form-horizontal center team-form"} do |f|
+        .form-group
+          = f.label :Team_Name, class: "col-md-3 control-label"
+          .col-md-3
+            = f.text_field :name
+        hr
+        .form-group
+          = f.label :head_coach, class: "col-md-3 control-label"
+          .col-md-3
+            = f.text_field :head_coach
+        hr
+        .form-group
+          = f.label :city, class: "col-md-3 control-label"
+          .col-md-3
+            = f.text_field :city
+        hr
+        .form-group
+          = f.label :email_address, class: "col-md-3 control-label"
+          .col-md-3
+            = f.text_field :email_address
+        hr
+        .form-group
+          = f.label :description, class: "col-md-3 control-label"
+          .col-md-3
+            = f.text_field :description
+        hr
+        .form-group
+          = f.label :Team_Logo, class: "col-md-3 control-label"
+          .col-md-3
+            = f.file_field :team_logo
+        hr
+        .action
+          = f.submit 'Save', class: 'btn-block'
