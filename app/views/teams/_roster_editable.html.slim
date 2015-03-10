@@ -1,0 +1,14 @@
+#roster-listing 
+    table.table.table-striped.table-bordered.table-condensed
+      thead
+        tr
+          th.roster-num #
+          th Name
+          th POS
+      tbody
+        - @players.each do |player|
+          tr
+            td.roster-num = player.number
+            td.roster-td data-id="show-player-modal-#{player.id}" = link_to player.first_name + ' '  + player.last_name, edit_player_path
+            td.roster-pos-td = player.position
+            
