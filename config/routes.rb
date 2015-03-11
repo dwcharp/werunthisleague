@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   root 'league#index'
   resources :teams do
-    resources :players
-
     collection do
       get 'signup'
       post 'signup_confirm'  

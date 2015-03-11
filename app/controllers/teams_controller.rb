@@ -43,18 +43,6 @@ class TeamsController < ApplicationController
     redirect_to(@team)
   end
 
-  def edit_player
-    @team = Team.find(params[:id])
-    @player = @team.players.find(params[:player_id])
-  end
-
-  def update_player
-    @team = Team.find(params[:id])
-    @player = @team.players.find(params[:player_id])
-    @player.update(player_params)
-    redirect_to(@team)
-  end
-
   def signup
     @team = Team.new
   end

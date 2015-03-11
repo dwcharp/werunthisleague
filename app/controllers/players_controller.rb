@@ -1,25 +1,11 @@
 class PlayersController < ApplicationController
-  
   def new
-    @team = Team.find(params[:team_id])
-    @player = Player.new    
+  	@team = Team.find(params[:team_id])
+  	@player = Player.new
   end
 
   def create
     @player = Player.new(player_params)
-    @team = Team.find(params[:team_id])
-    @team.players << @player
-    redirect_to roster_management_team_path(@team)
-  end
-
-  def edit
-    @player = Player.find(params[:id])  
-  end
-
-  def update
-    @player = Player.find(params[:id])
-    @player.update(player_params)
-    redirect_to root_path
   end
 
   def signup
@@ -44,6 +30,6 @@ class PlayersController < ApplicationController
   private
   def player_params
     params.require(:player).permit(:last_name, :first_name, :home_town, :position, :email_address, :age, 
-      :height, :weight, :phone_number, :position, :throw, :bat, :college, :high_school, :home_town, :photo)
+      :height, :weight, :phone_number, :position, :throw, :bat, :college, :high_school, :home_town)
   end
 end
