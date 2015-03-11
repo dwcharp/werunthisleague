@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root 'league#index'
+
+  resources :sessions
+
   resources :teams do
     resources :players
 

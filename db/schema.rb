@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150205041704) do
+ActiveRecord::Schema.define(version: 20150311031757) do
+
+  create_table "coaches", force: true do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "number"
+    t.integer  "team_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "email_address"
+    t.string   "password_hash"
+  end
 
   create_table "games", force: true do |t|
     t.datetime "created_at"
@@ -60,6 +71,7 @@ ActiveRecord::Schema.define(version: 20150205041704) do
     t.string   "team_logo_content_type"
     t.integer  "team_logo_file_size"
     t.datetime "team_logo_updated_at"
+    t.integer  "coach_id"
   end
 
 end

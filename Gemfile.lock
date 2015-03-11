@@ -35,6 +35,7 @@ GEM
       jamespath (>= 0.5.1)
       multi_json (~> 1.0)
       multi_xml (~> 0.5)
+    bcrypt (3.1.7)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     builder (3.2.2)
@@ -157,6 +158,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   aws-sdk-core
+  bcrypt
   bootstrap-sass (~> 3.2.0)
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
