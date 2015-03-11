@@ -1,3 +1,5 @@
+#add-player
+  =link_to "Add player", new_team_player_path(@team)
 #roster-listing 
     table.table.table-striped.table-bordered.table-condensed
       thead
@@ -9,6 +11,6 @@
         - @players.each do |player|
           tr
             td.roster-num = player.number
-            td.roster-td data-id="show-player-modal-#{player.id}" = link_to player.first_name + ' '  + player.last_name, edit_player_path
+            td.roster-td data-id="show-player-modal-#{player.id}" = link_to player.first_name + ' '  + player.last_name, edit_team_player_path(player, :team_id => player.team.id)
             td.roster-pos-td = player.position
             

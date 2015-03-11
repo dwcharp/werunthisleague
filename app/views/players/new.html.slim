@@ -1,7 +1,8 @@
 html
   head
     div
-      = form_for(@player, url:teams_add_new_player_path) do |f|
+      -binding.pry
+      = form_for @player, :url => players_path(@player.id, :team_id => @team.id) do |f|
         .form-group
           = f.label :first_name
           = f.text_field :first_name
