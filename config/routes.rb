@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
   root 'league#index'
+
+  #sessions
+  resources :sessions
+
+  get    'login'  => 'sessions#new'
+  post   'login'  => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  get 'team_management' => 'teams#team_management'
+
   resources :teams do
     resources :players
 
@@ -10,7 +20,6 @@ Rails.application.routes.draw do
     
   	member do
   		post 'add_new_player'
-      get  'roster_management'
   	end	
   end
 
