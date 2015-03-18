@@ -21,5 +21,7 @@ nav.navbar.navbar-inverse role="navigation"
           li
             a href=signup_teams_path  Team Signup
       li
-        a href=new_session_path  Login
+        a = link_to 'Login', login_path, :method => 'get'
+      li
+        a = link_to 'Logout', logout_path, :method => 'delete'
   /! /.navbar-collapse

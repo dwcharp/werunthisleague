@@ -1,4 +1,8 @@
 class TeamsController < ApplicationController
+  
+  before_action :redirect_if_not_logged_in, only: [:new, :create, :edit, :update, :team_management,
+    :add_new_player, :edit_player, :update_player]
+
   def new
     @team = Team.new
   end
@@ -32,8 +36,8 @@ class TeamsController < ApplicationController
     @players = @team.players
   end
 
-  def roster_management
-    @team = Team.find(params[:id])
+  def team_management
+    @team = Team.find(current_user.team_id)
     @players = @team.players
   end
 
