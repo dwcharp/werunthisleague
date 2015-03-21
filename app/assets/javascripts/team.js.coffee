@@ -10,3 +10,8 @@ $ ->
       playerId = $(this).attr("data-id")
       $('#' + playerId).modal('hide')
       return
+  $('#calendar').fullCalendar(
+      events: '/games.json'
+      dayClick: () -> 
+        alert('a day has been clicked!')
+    )

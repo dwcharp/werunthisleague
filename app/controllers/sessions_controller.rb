@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
 
     if coach.password == params[:password]
       set_session_user_id(coach.id, false)
-      redirect_to roster_management_team_path(coach.team_id)
+      redirect_to team_management_path
     else
       render :new
     end

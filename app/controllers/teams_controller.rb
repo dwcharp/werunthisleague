@@ -41,6 +41,11 @@ class TeamsController < ApplicationController
     @players = @team.players
   end
 
+  def games
+    @team = Team.find(current_user.team_id)
+    @games = @team.games
+  end
+
   def add_new_player
     @team = Team.find(params[:id])
     @team.players << Player.new(player_params)

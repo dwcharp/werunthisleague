@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :sessions
 
   get    'login'  => 'sessions#new'
+  get    'games' => 'teams#games'
   post   'login'  => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 

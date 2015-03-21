@@ -3,5 +3,6 @@ class Team < ActiveRecord::Base
   validates_attachment_content_type :team_logo, :content_type => /\Aimage\/.*\Z/
 	
   has_many :players
+  has_many :games
   belongs_to :coach
 end
