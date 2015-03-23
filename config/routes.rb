@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   #sessions
   resources :sessions
 
-  get    'login'  => 'sessions#new'
-  get    'games' => 'teams#games'
-  post   'login'  => 'sessions#create'
+  resources :games
+
+  get  'login'  => 'sessions#new'
+  get   'mygames' => 'games#team_games'
+  post  'login'  => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
   get 'team_management' => 'teams#team_management'

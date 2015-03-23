@@ -1,7 +1,6 @@
 html
   head
     div
-      -binding.pry
       = form_for @player, :url => players_path(@player.id, :team_id => @team.id) do |f|
         .form-group
           = f.label :first_name

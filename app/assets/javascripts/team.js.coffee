@@ -11,7 +11,7 @@ $ ->
       $('#' + playerId).modal('hide')
       return
   $('#calendar').fullCalendar(
-      events: '/games.json'
+      events: '/mygames.json'
       dayClick: () -> 
         alert('a day has been clicked!')
     )
