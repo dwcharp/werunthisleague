@@ -33,6 +33,10 @@
         .col-md-4
           = f.text_field :position
       .form-group
+        = f.label :number, class: "col-md-4 control-label"
+        .col-md-4
+          = f.text_field :number
+      .form-group
         = f.label :throw, class: "col-md-4 control-label"
         .col-md-4
           = f.text_field :throw
@@ -57,4 +61,4 @@
           .col-md-4
             = f.file_field :photo
       .action
-        = f.submit '  Sign up', class: 'btn-block'
+        = f.submit '  Save', class: 'btn-block'

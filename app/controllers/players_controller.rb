@@ -17,6 +17,7 @@ class PlayersController < ApplicationController
   end
 
   def update
+    binding.pry
     @player = Player.find(params[:id])
     @player.update(player_params)
     redirect_to root_path
@@ -44,6 +45,6 @@ class PlayersController < ApplicationController
   private
   def player_params
     params.require(:player).permit(:last_name, :first_name, :home_town, :position, :email_address, :age, 
-      :height, :weight, :phone_number, :position, :throw, :bat, :college, :high_school, :home_town, :photo)
+      :height, :weight, :phone_number, :position, :throw, :bat, :college, :high_school, :home_town, :photo, :number)
   end
 end

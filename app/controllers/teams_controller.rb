@@ -48,8 +48,9 @@ class TeamsController < ApplicationController
   end
 
   def edit_player
-    @team = Team.find(params[:id])
-    @player = @team.players.find(params[:player_id])
+    binding.pry
+    @team = Team.find(params[:team_id])
+    @player = @team.players.find(params[:id])
   end
 
   def update_player
